@@ -1,0 +1,8 @@
+{application, webserver, [
+    {description, "Erlang Web Server"},
+    {vsn, "2.0"},
+    {applications,[
+        kernel, stdlib, inets
+    ]},
+    {mod, {webserver_app, []}}
+]}.

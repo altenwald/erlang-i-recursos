@@ -1,0 +1,7 @@
+{application, fact, [
+    {description, "Factorial"},
+    {vsn, "1.0"},
+    {applications,[
+        kernel, stdlib, inets
+    ]}
+]}.
