@@ -1,5 +1,5 @@
 -module(escucha).
--compile([export_all]).
+-export([escucha/0, para/1, dime/2, init/0]).
 
 escucha() ->
     receive
