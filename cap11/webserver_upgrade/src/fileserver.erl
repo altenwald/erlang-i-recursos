@@ -23,7 +23,7 @@ send(Request) ->
             ),
             <<
                 ?RESP_200/binary, "text/html",
-                "\nContent-lenght: ", Size/binary,
+                "\nContent-length: ", Size/binary,
                 "\n\n", Content/binary
             >>;
         "/" ++ Path ->
@@ -37,7 +37,7 @@ send(Request) ->
                     Type = mimetype(Path),
                     <<
                         ?RESP_200/binary, Type/binary,
-                        "\nContent-lenght: ", Size/binary,
+                        "\nContent-length: ", Size/binary,
                         "\n\n", Content/binary
                     >>;
                 {error, _} ->
