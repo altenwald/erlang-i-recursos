@@ -1,0 +1,6 @@
+{"1.1.0",
+[{<<"mimetypes">>,{pkg,<<"mimetypes">>,<<"1.1.0">>},0}]}.
+[
+{pkg_hash,[
+ {<<"mimetypes">>, <<"82D455AE77558C0B839D7EF8F862FB67AD4450CD394FC728F8D894078F95B40F">>}]}
+].

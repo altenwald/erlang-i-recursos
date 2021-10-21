@@ -1,6 +1,6 @@
 {application, webserver, [
     {description, "Erlang Web Server"},
-    {vsn, "1.0"},
+    {vsn, "0.1.0"},
     {applications,[
         kernel, stdlib, inets, mimetypes
     ]},

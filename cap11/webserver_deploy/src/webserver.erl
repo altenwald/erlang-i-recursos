@@ -20,7 +20,7 @@ worker_loop(Socket, State) ->
     receive
         {http, Socket, {http_request, Method, TPath, _}} ->
             {abs_path, Path} = TPath,
-            error_logger:info_msg("Peticion: ~p~n", [Path]),
+            error_logger:info_msg("Request: ~p~n", [Path]),
             worker_loop(Socket, State ++ [
                 {method, Method}, {path, Path}
             ]);
@@ -31,9 +31,9 @@ worker_loop(Socket, State) ->
             gen_tcp:send(Socket, Response),
             gen_tcp:close(Socket);
         {tcp_closed, Socket} ->
-            error_logger:info_msg("Finalizado.~n"),
+            error_logger:info_msg("End.~n"),
             gen_tcp:close(Socket);
         Any ->
-            error_logger:info_msg("No reconocido: ~p~n", [Any]),
+            error_logger:info_msg("Unknown: ~p~n", [Any]),
             gen_tcp:close(Socket)
     end.

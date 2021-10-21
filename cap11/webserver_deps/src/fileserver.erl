@@ -24,7 +24,7 @@ send(Request) ->
             [Type] = mimetypes:filename(Path),
             <<
                 ?RESP_200/binary, Type/binary,
-                "\nContent-lenght: ", Size/binary,
+                "\nContent-length: ", Size/binary,
                 "\r\n\r\n", Content/binary
             >>;
         {error, _} ->
